@@ -23,8 +23,16 @@ function Booklist(){
     <main>
       <h1>The Booklist</h1>
       <section className='booklist'>
-        <Book source={firstbook.source} title={firstbook.title} author={firstbook.author}/>
-        <Book source={secondbook.source} title={secondbook.title} author={secondbook.author}/>
+        <Book 
+          source={firstbook.source}
+          title={firstbook.title}
+          author={firstbook.author}
+        />
+        <Book
+          source={secondbook.source}
+          title={secondbook.title}
+          author={secondbook.author}
+        />
 
       </section>
     </main>
@@ -32,16 +40,14 @@ function Booklist(){
 }
 
 
-const Book = (props) => {
-  console.log(props);
+const Book = ({ source, title, author }) => {
+  // console.log(props);
+  // const { source, title, author } = props;
   return (
     <article className='book'>
-      <img 
-        src={props.source}
-        alt=""
-      />
-      <h3>{props.title}</h3>
-  <h4 style={{color:'#617d98'}}>{props.author}</h4>
+      <img src={source} alt=""/>
+      <h3>{title}</h3>
+      <h4>{author}</h4>
     </article> 
   )
 }
