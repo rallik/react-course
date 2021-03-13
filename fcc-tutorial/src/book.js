@@ -4,7 +4,7 @@ const Book = (props) => {
     
     return (
       <article className='book'>
-        <img onMouseOver={() => console.log('this works too')} src={source} alt=''/>
+        <img className='cover' onMouseOver={() => console.log('this works too')} src={source} alt=''/>
         <h3>{title}</h3>
         <h4>{author}</h4>
         {/* <button type='button' onClick={clickHandler}>Button</button> */}
